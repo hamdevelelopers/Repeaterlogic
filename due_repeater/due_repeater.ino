@@ -1,5 +1,5 @@
 /*
-Playing sounds from SD card. Based on simple audio player. 
+Playing sounds from SD card. Based on simple audio player.
 
 */
 
@@ -29,7 +29,7 @@ void setup()
 
 void loop()
 {
-  int count = 0;
+
 
   // open wave file from sdcard
   File myFile = SD.open("LA5DRb.wav");
@@ -39,6 +39,16 @@ void loop()
     while (true);
   }
 
+  playfile(myFile);
+
+  Serial.println("End of file. Thank you for listening!");
+  while (true) ;
+
+
+}
+
+void playfile(File myFile) {
+  int count = 0;
   const int S = 1024; // Number of samples to read in block
   short buffer[S];
 
@@ -63,6 +73,4 @@ void loop()
   }
   myFile.close();
 
-  Serial.println("End of file. Thank you for listening!");
-  while (true) ;
 }
