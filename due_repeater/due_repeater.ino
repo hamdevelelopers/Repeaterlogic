@@ -8,6 +8,7 @@ Playing sounds from SD card. Based on simple audio player.
 #include <Audio.h>
 File callsign, callsign_beacon, callsign2, callsign_beacon2, file1, file2, file3, file4, file5, file6, file7, file8, file9, file0, filepoint;
 #define dualrepeater;
+#define debug;
 
 void setup()
 {
@@ -98,59 +99,59 @@ bool loadfiles()
   }
 #endif
 
-  File callsign_beacon = SD.open("1.wav");
-  if (!callsign_beacon) {
-    Serial.println("error opening callsign_beacon.wav");
+  File file1 = SD.open("1.wav");
+  if (!file1) {
+    Serial.println("error opening 1.wav");
   }
 
-  File callsign = SD.open("2.wav");
-  if (!callsign) {
-    Serial.println("error opening callsign.wav");
+  File file2 = SD.open("2.wav");
+  if (!file2) {
+    Serial.println("error opening 2.wav");
   }
 
-  File callsign_beacon = SD.open("3.wav");
-  if (!callsign_beacon) {
-    Serial.println("error opening callsign_beacon.wav");
+  File file3 = SD.open("3.wav");
+  if (!file3) {
+    Serial.println("error opening 3.wav");
   }
 
-  File callsign = SD.open("4.wav");
-  if (!callsign) {
-    Serial.println("error opening callsign.wav");
+  File file4 = SD.open("4.wav");
+  if (!file4) {
+    Serial.println("error opening 4.wav");
   }
 
-  File callsign_beacon = SD.open("5.wav");
-  if (!callsign_beacon) {
-    Serial.println("error opening callsign_beacon.wav");
+  File file5 = SD.open("5.wav");
+  if (!file5) {
+    Serial.println("error opening 5.wav");
   }
   
-  File callsign = SD.open("6.wav");
-  if (!callsign) {
+  File file6 = SD.open("6.wav");
+  if (!file6) {
+    Serial.println("error opening 6.wav");
+  }
+  
+  File file7 = SD.open("7.wav");
+  if (!file7) {
+    Serial.println("error opening 7.wav");
+  }
+  
+  File file8 = SD.open("8.wav");
+  if (!file8) {
+    Serial.println("error opening 8.wav");
+  }
+  
+  File file9 = SD.open("9.wav");
+  if (!file9) {
+    Serial.println("error opening 9.wav");
+  }
+  
+  File file0 = SD.open("0.wav");
+  if (!file0) {
     Serial.println("error opening callsign.wav");
   }
   
-  File callsign_beacon = SD.open("7.wav");
-  if (!callsign_beacon) {
-    Serial.println("error opening callsign_beacon.wav");
-  }
-  
-  File callsign = SD.open("8.wav");
-  if (!callsign) {
-    Serial.println("error opening callsign.wav");
-  }
-  
-  File callsign_beacon = SD.open("9.wav");
-  if (!callsign_beacon) {
-    Serial.println("error opening callsign_beacon.wav");
-  }
-  
-  File callsign = SD.open("0.wav");
-  if (!callsign) {
-    Serial.println("error opening callsign.wav");
-  }
-  
-  File callsign_beacon = SD.open("point.wav");
-  if (!callsign_beacon) {
-    Serial.println("error opening callsign_beacon.wav");
+  File filepoint = SD.open("point.wav");
+  if (!filepoint) {
+    Serial.println("error opening 10.wav");
   }
 
 
