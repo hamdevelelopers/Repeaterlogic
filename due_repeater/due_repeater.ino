@@ -18,10 +18,10 @@ void setup()
   // setup SD-card
   Serial.print("Initializing SD card...");
   if (!SD.begin(4)) {
-    Serial.println(" failed!");
+    Serial.println("Init failed!");
     return;
   }
-  Serial.println(" done.");
+  Serial.println("Init succeed.");
   // hi-speed SPI transfers
   SPI.setClockDivider(4);
 
@@ -81,77 +81,77 @@ bool loadfiles()
 {
   File callsign_beacon = SD.open("LA5DRb.wav");
   if (!callsign_beacon) {
-    Serial.println("error opening callsign_beacon.wav");
+    Serial.println("error opening callsign_beacon: LA5DRb.wav");
   }
   File callsign = SD.open("LA5DR.wav");
   if (!callsign) {
-    Serial.println("error opening callsign.wav");
+    Serial.println("error opening callsign: LA5DR.wav");
   }
 
 #if defined(dualrepeater)
   File callsign_beacon2 = SD.open("LA9DRb.wav");
   if (!callsign_beacon2) {
-    Serial.println("error opening callsign_beacon.wav");
+    Serial.println("error opening callsign_beacon2: LA9DRb.wav");
   }
   File callsign2 = SD.open("LA9DR.wav");
   if (!callsign2) {
-    Serial.println("error opening callsign.wav");
+    Serial.println("error opening callsign2: LA9DR.wav");
   }
 #endif
 
   File file1 = SD.open("1.wav");
   if (!file1) {
-    Serial.println("error opening 1.wav");
+    Serial.println("error opening file1: 1.wav");
   }
 
   File file2 = SD.open("2.wav");
   if (!file2) {
-    Serial.println("error opening 2.wav");
+    Serial.println("error opening file2: 2.wav");
   }
 
   File file3 = SD.open("3.wav");
   if (!file3) {
-    Serial.println("error opening 3.wav");
+    Serial.println("error opening file3: 3.wav");
   }
 
   File file4 = SD.open("4.wav");
   if (!file4) {
-    Serial.println("error opening 4.wav");
+    Serial.println("error opening file4: 4.wav");
   }
 
   File file5 = SD.open("5.wav");
   if (!file5) {
-    Serial.println("error opening 5.wav");
+    Serial.println("error opening file5: 5.wav");
   }
   
   File file6 = SD.open("6.wav");
   if (!file6) {
-    Serial.println("error opening 6.wav");
+    Serial.println("error opening file6: 6.wav");
   }
   
   File file7 = SD.open("7.wav");
   if (!file7) {
-    Serial.println("error opening 7.wav");
+    Serial.println("error opening file7: 7.wav");
   }
   
   File file8 = SD.open("8.wav");
   if (!file8) {
-    Serial.println("error opening 8.wav");
+    Serial.println("error opening file8: 8.wav");
   }
   
   File file9 = SD.open("9.wav");
   if (!file9) {
-    Serial.println("error opening 9.wav");
+    Serial.println("error opening file9: 9.wav");
   }
   
   File file0 = SD.open("0.wav");
   if (!file0) {
-    Serial.println("error opening callsign.wav");
+    Serial.println("error opening file0: 0.wav");
   }
   
   File filepoint = SD.open("point.wav");
   if (!filepoint) {
-    Serial.println("error opening 10.wav");
+    Serial.println("error opening filepoint: point.wav");
   }
 
 
