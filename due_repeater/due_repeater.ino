@@ -38,9 +38,6 @@ void loop()
 {
 
 
-  // open wave file from sdcard
-
-
   playfile(callsign_beacon);
 
   Serial.println("End of file. Thank you for listening!");
@@ -153,7 +150,7 @@ bool loadfiles()
   if (!filepoint) {
     Serial.println("error opening filepoint: point.wav");
   }
-
-
-
+  return HIGH;
 }
+
+
